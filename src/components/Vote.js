@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Vote extends Component {
-    render() {
-        return (
-            <div className="border rounded px-3 py-2">
-                <i className="fas fa-arrow-up text-primary" />
-                <div>
-                    20
-                </div>
-            </div>
-        )
-    }
+const Vote = props => {
+  const { votes } = props;
+  return (
+    <div className="border rounded px-3 py-2">
+      <div className="d-flex justify-content-center">
+        <i className="fas fa-arrow-up text-primary" />
+      </div>
+      <div className="mt-2">
+        {votes}
+      </div>
+    </div>
+  )
 }
 
 export default Vote;
